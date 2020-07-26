@@ -1,19 +1,13 @@
-#encoding: utf-8
-import random
-import os
+# -*- coding: utf-8 -*-
+from .main import categorias
 
 class Forca:
-    palavra = str()
-    categoria = str()
-
     def __init__(self, categoria):
-        # entra no arquivo e sorteia palavra.
-        self.categoria = categoria
-        self.sortear()
-        
-    def sortear(self):
-        if self.categoria == 'animais':
-            pass
+        self.opcao = categorias[categoria]()
+
+    def palavra(self):
+        return self.opcao.palavra_sorteada
+
 
 if __name__ == '__main__':
 
@@ -21,7 +15,6 @@ if __name__ == '__main__':
         sorteio = animais.read().split('\n')
         tam = len(sorteio)
         palavra_sorteada = (sorteio[random.randrange(0,tam)])
-        
     # print(palavra_sorteada.upper()+'\n')
 
     qtd_letras = (len(palavra_sorteada))
