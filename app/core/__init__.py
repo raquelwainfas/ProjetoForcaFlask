@@ -14,7 +14,7 @@ if __name__ == '__main__':
     with open("Animais.txt", "r", encoding="utf8") as animais:
         sorteio = animais.read().split('\n')
         tam = len(sorteio)
-        palavra_sorteada = (sorteio[random.randrange(0,tam)])
+        palavra_sorteada = (sorteio[random.randrange(0,tam)]) #noqa
     # print(palavra_sorteada.upper()+'\n')
 
     qtd_letras = (len(palavra_sorteada))
@@ -38,5 +38,5 @@ if __name__ == '__main__':
                 escondida[index] = letra_ipt.upper()
                 #print(escondida)
                 final = " ".join(escondida)
-        os.system('cls')
+        os.system('cls') #noqa
         print(final)
