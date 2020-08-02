@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Forca - {% block title %}{% endblock %}</title>
+    </head>
+
+    <body>
+
+        <h1>Forca</h1>
+
+        {{ palavra }}
+        {% for letra in palavra %}
+        {% set counter = loop.index %}
+        <span id="letra{{ counter }}">_ </span>
+        {% endfor %}
+        <br><br><br> Digite uma letra: <input type="text" name="letra" id="letra" maxlength="1">
+
+        <script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+        <script>
+
+        </script>
+    </body>
+
+</html>

@@ -4,9 +4,9 @@ from .animais import animais
 from .paises import paises
 
 def create_app():
-    app = Flask('__main__')
+    app = Flask('__main__', template_folder='app/templates', static_folder='app/static')
     app.config.from_object(Config)
     app.register_blueprint(animais, url_prefix='/animais')
     app.register_blueprint(paises, url_prefix='/paises')
-        
-    return app  
+
+    return app
